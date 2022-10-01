@@ -1,15 +1,15 @@
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 import produce from "immer";
 import coreData from "../fixedData";
-import { FilterBtn, SetBtn } from "./Buttons";
-import { Status, allGradesForFilter, allStatusForFilter } from "../constant";
-import { useContext } from "react";
+import {FilterBtn, SetBtn} from "./Buttons";
+import {Status, allGradesForFilter, allStatusForFilter} from "../constant";
+import {useContext} from "react";
 import globalContext from "../Context";
 
 export default function Filter(props) {
   const globalContextVal = useContext(globalContext);
-  const { filterPrams, setFilterPrams } = globalContextVal;
-  const { gradeIds, statuses } = filterPrams;
+  const {filterPrams, setFilterPrams} = globalContextVal;
+  const {gradeIds, statuses} = filterPrams;
 
   const gradeIsAll = gradeIds.length === allGradesForFilter.length;
   const statusesIsAll = statuses.length === allStatusForFilter.length;
@@ -38,7 +38,7 @@ export default function Filter(props) {
               text: "未读",
             },
           ].map((item) => {
-            const { id, text } = item;
+            const {id, text} = item;
             const checked = statuses.includes(id);
             return (
               <FilterBtn
@@ -86,7 +86,7 @@ export default function Filter(props) {
           `}
         >
           {coreData.gradeList.map((grade) => {
-            const { id } = grade;
+            const {id} = grade;
             const checked = gradeIds.includes(id);
             const gradeCNName = coreData.gradeIDToCnList[id];
             return (

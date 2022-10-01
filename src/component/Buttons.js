@@ -1,8 +1,8 @@
 import classnames from "classnames";
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 
 function Button(props) {
-  const { text, onClick, className } = props;
+  const {text, onClick, className} = props;
   return (
     <div onClick={onClick} className={classnames(className, "button")}>
       {text}
@@ -11,7 +11,7 @@ function Button(props) {
 }
 
 function FilterBtn(props) {
-  const { className, checked = false, ...rest } = props;
+  const {className, checked = false, ...rest} = props;
   return (
     <Button
       className={classnames(
@@ -28,7 +28,7 @@ function FilterBtn(props) {
 }
 
 function SetBtn(props) {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
   return (
     <Button
       className={classnames(
@@ -45,11 +45,11 @@ function SetBtn(props) {
 }
 
 function SwitchStatusBtn(props) {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
   return (
     <Button className={classnames(className, "switchStatusButton")} {...rest} />
   );
 }
 
 export default Button;
-export { FilterBtn, SwitchStatusBtn, SetBtn };
+export {FilterBtn, SwitchStatusBtn, SetBtn};

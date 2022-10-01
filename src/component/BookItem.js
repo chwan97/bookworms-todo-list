@@ -1,16 +1,16 @@
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 import classnames from "classnames";
-import { SwitchStatusBtn } from "./Buttons";
-import { Status } from "../constant";
-import { useContext } from "react";
+import {SwitchStatusBtn} from "./Buttons";
+import {Status} from "../constant";
+import {useContext} from "react";
 import globalContext from "../Context";
 
 export default function BookItem(props) {
-  const { book } = props;
-  const { name, id, status } = book;
+  const {book} = props;
+  const {name, id, status} = book;
   const isRead = status === Status.read;
   const globalContextVal = useContext(globalContext);
-  // console.log("globalContextVal.showOptBtn", globalContextVal.showOptBtn);
+
   return (
     <div
       className={css`

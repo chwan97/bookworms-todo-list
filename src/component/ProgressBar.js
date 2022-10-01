@@ -1,8 +1,8 @@
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 
 export default function ProgressBar(props) {
   // val -> 0 ~ 100
-  const { val } = props;
+  const {val} = props;
   return (
     <div
       className={css`

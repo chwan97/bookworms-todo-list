@@ -1,5 +1,5 @@
-import React, { Context, useEffect, useMemo, useState } from "react";
-import { cloneDeep } from "lodash";
+import React, {Context, useEffect, useMemo, useState} from "react";
+import {cloneDeep} from "lodash";
 import produce from "immer";
 
 import {
@@ -20,11 +20,11 @@ import {
   readBookByIds,
 } from "./utils";
 
-import { Status, allGradesForFilter, allStatusForFilter } from "./constant";
+import {Status, allGradesForFilter, allStatusForFilter} from "./constant";
 import "./App.css";
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 
-const { Gears } = Icons;
+const {Gears} = Icons;
 
 const getAllBookIds = () => {
   const bookIds = [];
@@ -84,7 +84,7 @@ function App() {
   });
 
   useEffect(() => {
-    const { gradeIds, statuses } = filterPrams;
+    const {gradeIds, statuses} = filterPrams;
     const bookAfterFilter = [...allBooks]
       .map(([_, book]) => book)
       .filter((book) => {
@@ -96,7 +96,7 @@ function App() {
         }
         return true;
       });
-    // console.log(gradeIds, statuses, bookAfterFilter, "bookAfterFilter");
+
     setBookAfterFilter(bookAfterFilter);
   }, [allBooks, filterPrams]);
 
@@ -128,6 +128,7 @@ function App() {
       },
     };
   }, [showOptBtn, allBooks, setAllBooks, filterPrams, bookAfterFilter]);
+
   const [unreadNum, readNum, total, percent] = useMemo(() => {
     let unreadNum = 0;
     let readNum = 0;
@@ -173,20 +174,20 @@ function App() {
             setShowOptBtn((show) => !show);
           }}
         >
-          <Gears />
+          <Gears/>
           {showOptBtn ? "退出" : "编辑"}
         </div>
         <div className="bookListWrapper">
-          <BookList />
+          <BookList/>
         </div>
         <div className="progressWrapper">
-          <Filter />
+          <Filter/>
           <ProgressDetail
             unreadNum={unreadNum}
             readNum={readNum}
             total={total}
           />
-          <ProgressBar val={percent} />
+          <ProgressBar val={percent}/>
         </div>
       </div>
     </GlobalContext.Provider>

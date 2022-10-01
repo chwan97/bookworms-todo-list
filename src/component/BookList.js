@@ -1,12 +1,12 @@
 import BookItem from "./BookItem";
-import { useContext, useMemo } from "react";
-import { css } from "@emotion/css";
+import {useContext, useMemo} from "react";
+import {css} from "@emotion/css";
 import coreData from "../fixedData";
-import { cloneDeep } from "lodash";
+import {cloneDeep} from "lodash";
 import globalContext from "../Context";
 
 function Grade(props) {
-  const { grade } = props;
+  const {grade} = props;
   return (
     <div
       className={css`
@@ -32,7 +32,7 @@ function Grade(props) {
       </div>
 
       {grade.books.map((item) => {
-        return <BookItem book={item} />;
+        return <BookItem book={item}/>;
       })}
     </div>
   );
@@ -40,18 +40,15 @@ function Grade(props) {
 
 export default function BookList(props) {
   const globalContextVal = useContext(globalContext);
-  const { bookAfterFilter } = globalContextVal;
-  // console.log(allBooks);
+  const {bookAfterFilter} = globalContextVal;
   const gradesListWithBook = useMemo(() => {
     const gradeInfos = [];
-    // console.log(bookAfterFilter, bookAfterFilter);
     coreData.gradeList.forEach((gradeRaw) => {
       const grade = cloneDeep(gradeRaw);
-      const { id } = grade;
+      const {id} = grade;
       const gradeBookList = [];
 
       bookAfterFilter.forEach((book) => {
-        // console.log(book, 'book')
         if (book.grade.id === id) {
           gradeBookList.push(book);
         }
@@ -77,7 +74,7 @@ export default function BookList(props) {
       `}
     >
       {gradesListWithBook.map((grade) => {
-        return <Grade grade={grade} />;
+        return <Grade grade={grade}/>;
       })}
     </div>
   );

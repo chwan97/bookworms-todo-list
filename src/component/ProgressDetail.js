@@ -1,8 +1,8 @@
-import { css } from "@emotion/css";
+import {css} from "@emotion/css";
 import React from "react";
 
 export default function ProgressDetail(props) {
-  const { unreadNum, readNum, total } = props;
+  const {unreadNum, readNum, total} = props;
   return (
     <div
       className={css`

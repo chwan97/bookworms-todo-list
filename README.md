@@ -1,22 +1,19 @@
 
 # bookworms-todo-list
 
+> 拥有阅读进度和筛选功能的《牛津书虫丛书》书单 todo list。<br />
+> manage your oxford bookworms library reading progress with to do list. 
+
+![演示图片](https://res.cloudinary.com/dlf0lauxy/image/upload/v1664625965/github/Screen_Shot_2022-10-01_at_11.36.29_AM_ms7fnr.png
+)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
