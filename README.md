@@ -2,7 +2,7 @@
 # bookworms-todo-list
 
 > 拥有阅读进度和筛选功能的《牛津书虫丛书》书单 todo list。<br />
-> manage your oxford bookworms library reading progress with to do list. 
+> manage your reading progress of oxford bookworms library with to do list. 
 
 ![演示图片](https://res.cloudinary.com/dlf0lauxy/image/upload/v1664625965/github/Screen_Shot_2022-10-01_at_11.36.29_AM_ms7fnr.png
 )
